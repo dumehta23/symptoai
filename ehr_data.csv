@@ -1,0 +1,11 @@
+patient_id,name,age,gender,medical_history,symptoms,notes
+1,John Doe,45,Male,"Hypertension, High Cholesterol","fever, cough, fatigue","Patient reports persistent fever (101°F) and dry cough for 3 days, feels very tired"
+2,Jane Smith,32,Female,None,"headache, dizziness","Complains of migraines and occasional dizziness, especially when standing"
+3,Robert Johnson,68,Male,"Diabetes Type 2, Arthritis","joint_pain, blurred_vision","Diabetes management poor, reports joint pain and blurry vision"
+4,Emily Chen,29,Female,Asthma,"shortness_of_breath, coughing","Asthma exacerbation after visiting a friend with cats"
+5,Michael Brown,50,Male,"GERD, Sleep Apnea","chest_pain, acid_reflux","Describes burning chest pain after meals, trouble sleeping"
+6,Sarah Wilson,27,Female,None,"abdominal_pain, nausea","Severe stomach pain and vomiting after eating dairy"
+7,David Lee,60,Male,"COPD, Hypertension","wheezing, breathlessness","Shortness of breath worse in mornings, heavy smoker"
+8,Lisa Taylor,42,Female,"Depression, Anxiety","fatigue, restlessness","Feeling exhausted but can't sleep, anxious thoughts"
+9,James Miller,35,Male,None,"back_pain, fever","Construction worker with lower back pain and low-grade fever"
+10,Maria Garcia,55,Female,"Osteoporosis, Hypothyroidism","joint_pain, weight_gain","Knee pain worsening, gained 15lbs in 6 months"
