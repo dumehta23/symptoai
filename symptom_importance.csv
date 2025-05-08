@@ -1,0 +1,378 @@
+Feature,Importance
+cough,0.019142550316347554
+shortness of breath,0.017500987999631297
+dizziness,0.014888113455603683
+emotional symptoms,0.014262026264177743
+sharp abdominal pain,0.01405300088952443
+depressive or psychotic symptoms,0.013386875541001016
+vomiting,0.012585911065287128
+headache,0.012113437837030783
+sharp chest pain,0.011604059357326647
+fatigue,0.01011502757705799
+knee lump or mass,0.00981739407048802
+nasal congestion,0.00967287355111531
+lack of growth,0.009507832206024016
+weight gain,0.008994341393856378
+involuntary urination,0.008981411528685574
+difficulty speaking,0.008918047231155407
+hand or finger pain,0.008613678819970006
+anxiety and nervousness,0.008586715857673313
+elbow weakness,0.008524315869543345
+hot flashes,0.008502202249140459
+skin swelling,0.008470360609437752
+arm stiffness or tightness,0.008419546492399817
+cross-eyed,0.008218570827701013
+sore throat,0.00809533370829828
+abnormal involuntary movements,0.008088609433210754
+diminished hearing,0.007978611823972158
+feeling ill,0.0079420309168106
+nausea,0.007754230786600282
+flatulence,0.007724030693074446
+suprapubic pain,0.007709241037563133
+wrist swelling,0.007593279021825928
+leg pain,0.0074765681725640935
+skin growth,0.007433952607864473
+back pain,0.007149417663817584
+abusing alcohol,0.006981900954538392
+difficulty in swallowing,0.006945757028396454
+ear pain,0.0068415047997291
+insomnia,0.006807485548316971
+blood in stool,0.006718335309423847
+depression,0.006670925880044597
+lower abdominal pain,0.006643183561485514
+groin mass,0.006530559243803104
+hip pain,0.006420600614860054
+knee pain,0.006345143688513601
+fainting,0.006307343529996964
+wrist weakness,0.006293615687454655
+low back weakness,0.006227963938368155
+bones are painful,0.00621963955771311
+throat feels tight,0.006099538991645541
+hand or finger stiffness or tightness,0.006048317441111212
+disturbance of memory,0.006014452907433706
+itchy eyelid,0.006012799640412976
+retention of urine,0.00583046024325871
+swollen lymph nodes,0.005815730309593317
+pain in eye,0.005808338230840767
+skin rash,0.005799812187342276
+diminished vision,0.005745684489851635
+fever,0.005745236851876071
+lip swelling,0.005742097556782127
+vaginal dryness,0.005740419634845908
+drug abuse,0.005702259351296702
+lump in throat,0.005659041148625282
+abnormal appearing skin,0.005638332375617864
+seizures,0.005553355647172673
+swelling of scrotum,0.005525873382091183
+excessive appetite,0.00542917270093585
+knee stiffness or tightness,0.005421008017238842
+impotence,0.005345348771893133
+back weakness,0.005199132422956263
+irregular belly button,0.005057057729438253
+vaginal bleeding after menopause,0.0050123714578360545
+foot or toe pain,0.004925861418439083
+arm pain,0.004867963621884975
+peripheral edema,0.004780751765874765
+symptoms of the scrotum and testes,0.0047671507165192376
+muscle swelling,0.004764074333198812
+weakness,0.004728799934345856
+muscle stiffness or tightness,0.0047284060866960844
+symptoms of eye,0.004692618903133572
+dry lips,0.004593106567514349
+skin lesion,0.004589472736731354
+vaginal itching,0.004588077879421502
+pus draining from ear,0.004519066720068993
+itching of scrotum,0.004514711535790044
+problems with movement,0.004499909559610071
+facial pain,0.004499487563869697
+nightmares,0.0044909380346730724
+excessive anger,0.00449062383276539
+mass in scrotum,0.004466090310730894
+wrist pain,0.004330325457171261
+joint pain,0.004311623357206146
+incontinence of stool,0.004151533052365821
+shoulder pain,0.004130266190048612
+hoarse voice,0.004088704326754332
+neck mass,0.004081646329854831
+decreased appetite,0.004020759994122101
+neck swelling,0.004017391957974777
+itchiness of eye,0.00399910258531967
+recent weight loss,0.003995958821911679
+jaundice,0.00383631248841391
+painful urination,0.0038358222401424008
+acne or pimples,0.0037727003540679173
+throat swelling,0.0037331269731175213
+knee swelling,0.003717942908234555
+ache all over,0.0036481974533820634
+pain or soreness of breast,0.0036452448676268113
+frequent urination,0.0036025552142337756
+sleepiness,0.0035897210244362045
+uterine contractions,0.00357794834975078
+smoking problems,0.003576692537421231
+hand or finger swelling,0.003486623556661702
+diarrhea,0.0034836456969599204
+arm swelling,0.0034657295797669726
+palpitations,0.0034607084832133936
+foreign body sensation in eye,0.003442116093982533
+pelvic pain,0.0033732815180898316
+mouth ulcer,0.003304071129046693
+irregular heartbeat,0.003277654162208456
+neck pain,0.003214779803626674
+shoulder swelling,0.0031613687673786458
+blood in urine,0.00315258056002823
+tongue lesions,0.003141754311455239
+abnormal movement of eyelid,0.003133632581907038
+intermenstrual bleeding,0.003055107904823318
+double vision,0.0030472036306065527
+chills,0.002958542487165142
+feeling cold,0.0029099158667614425
+constipation,0.002818888246563316
+vaginal discharge,0.0027589128092392443
+chest tightness,0.0026403208549109656
+foot or toe swelling,0.0026245460135913535
+fears and phobias,0.0025967858367742713
+eye redness,0.002574638015839195
+spots or clouds in vision,0.002561110744079595
+muscle pain,0.0025604973128686907
+leg cramps or spasms,0.0025549787880980736
+absence of menstruation,0.002536161946400885
+loss of sensation,0.0025206858561779167
+itching of skin,0.0025121576495451665
+knee weakness,0.002396067531084129
+allergic reaction,0.002390106520594604
+burning abdominal pain,0.0023822580763240586
+hostile behavior,0.0023541285158295345
+pain in testicles,0.0023423369340393727
+leg swelling,0.0023225718863898754
+irritable infant,0.0023147280623568686
+rectal bleeding,0.0023000186925190686
+penis pain,0.0022531733813488473
+irregular appearing scalp,0.002244128671855011
+bleeding or discharge from nipple,0.0022414251164152
+lacrimation,0.0022187802567726904
+pain of the anus,0.0022129554187223953
+white discharge from eye,0.002162007184620285
+ankle pain,0.002139801943499249
+ankle swelling,0.0021262465477369743
+sweating,0.002108068567802677
+low back pain,0.002105567318696887
+leg lump or mass,0.0020910893182601053
+eye deviation,0.002086437851452187
+delusions or hallucinations,0.002079073855614338
+blindness,0.0020293525585035254
+temper problems,0.002007716738276142
+side pain,0.0020076300806667075
+elbow pain,0.001995157067168292
+restlessness,0.001987143451912868
+mouth pain,0.001974279039616457
+lower body pain,0.0019553736092939476
+stomach bloating,0.0019417598909437057
+bumps on penis,0.001932678420076737
+skin on arm or hand looks infected,0.0019301473506755007
+vomiting blood,0.0018682544302890995
+excessive growth,0.0018524989572062623
+upper abdominal pain,0.0018008052465966762
+eye moves abnormally,0.0017988801833433946
+leg stiffness or tightness,0.001707416283531843
+skin irritation,0.0016785805330068301
+lump or mass of breast,0.0016487839854036443
+pain during intercourse,0.0016380709404086753
+symptoms of bladder,0.001628091244761976
+spotting or bleeding during pregnancy,0.0016194739686380933
+foot or toe weakness,0.0015955867057863453
+heartburn,0.0015933656920598348
+leg weakness,0.0015762671965850285
+"skin dryness, peeling, scaliness, or roughness",0.0015577491005286212
+eye burns or stings,0.0015277380607523166
+bleeding from ear,0.00149970034856733
+shoulder stiffness or tightness,0.0014938078938261429
+slurring words,0.0014920232058596341
+ringing in ear,0.001472900628377946
+nosebleed,0.0014035003089108873
+hemoptysis,0.0013858198289966625
+toothache,0.0013728954359249756
+heavy menstrual flow,0.0013694324624856215
+infertility,0.0013553128942490492
+skin moles,0.001337662934849928
+swollen abdomen,0.0013185459295427142
+unwanted hair,0.0013169829047082382
+pain during pregnancy,0.0013142967023978356
+focal weakness,0.0012804660566820777
+increased heart rate,0.001273038441431893
+lymphedema,0.001255064823494077
+long menstrual periods,0.0012451279115951197
+itchy ear(s),0.0012317293468653205
+low self-esteem,0.0012247612847093821
+fluid in ear,0.0012226327245749228
+excessive urination at night,0.0012157087223698042
+unpredictable menstruation,0.0012149153251642996
+neck stiffness or tightness,0.001213110179800816
+abnormal breathing sounds,0.001212677369640991
+difficulty breathing,0.0012075178944857816
+changes in stool appearance,0.0012052014023744627
+elbow swelling,0.0011927799073853148
+frontal headache,0.0011813143913826174
+eyelid lesion or rash,0.0011688826037851798
+paresthesia,0.0011593839842825963
+decreased heart rate,0.0011455838957426087
+infant feeding problem,0.0011204895883029687
+problems during pregnancy,0.0010911076002266395
+warts,0.0010856192521141274
+groin pain,0.0010832256335623327
+redness in ear,0.001072279360399934
+regurgitation,0.00107125364435182
+swollen eye,0.001070980451014124
+vaginal redness,0.0010687243796193558
+mass on eyelid,0.0010480790185880115
+coryza,0.0010307337986729863
+obsessions and compulsions,0.0010300716025447132
+antisocial behavior,0.0010244365639137313
+low back cramps or spasms,0.001010053269018515
+loss of sex drive,0.0010028408863051866
+foot or toe lump or mass,0.0009833459856500276
+fluid retention,0.0009759853018163918
+pulling at ears,0.0009224551921346321
+irregular appearing nails,0.0009141535399155447
+difficulty eating,0.0009131246117524048
+flushing,0.000907836874828799
+skin on leg or foot looks infected,0.0009008329902756031
+bleeding gums,0.0008994998402932188
+gum pain,0.0008851359042500806
+plugged feeling in ear,0.0008648675752565196
+regurgitation.1,0.0008409451460199717
+apnea,0.0008281493580594765
+too little hair,0.0008221942569325979
+hand or finger lump or mass,0.0007800475764803208
+jaw swelling,0.0007685039861411206
+symptoms of the kidneys,0.0007351498805079673
+symptoms of the face,0.0007339345844288136
+cramps and spasms,0.0007209395523094503
+symptoms of prostate,0.0007118889288667006
+wrist lump or mass,0.0007101652329361957
+wrist stiffness or tightness,0.0007064579771302683
+melena,0.0006857717046341567
+sinus congestion,0.0006725797814988263
+wheezing,0.0006449105505351889
+vaginal pain,0.000623468311046023
+mouth dryness,0.0006116021215085349
+throat redness,0.0006003617781142761
+eyelid swelling,0.0005569176105126233
+swollen or red tonsils,0.0005554983090378001
+back cramps or spasms,0.0005512306531850982
+hysterical behavior,0.0005428538980476569
+hurts to breath,0.0005382776966324698
+pelvic pressure,0.0005279899607320924
+arm weakness,0.0005064128866276525
+ankle weakness,0.0004840261964368256
+recent pregnancy,0.00048402032794138655
+bowlegged or knock-kneed,0.00046930504245013346
+problems with shape or size of breast,0.00046488936061931855
+coughing up sputum,0.0004422854365912788
+stiffness all over,0.0004411025415437231
+bladder mass,0.0004189393104658933
+congestion in chest,0.00041451006179550907
+joint swelling,0.0003940472039927598
+penis redness,0.00038026796809866996
+itchy scalp,0.00036519905116331244
+shoulder weakness,0.0003630290117859564
+hesitancy,0.0003560280908675161
+vulvar irritation,0.00034410799828272847
+poor circulation,0.0003290404557304144
+breathing fast,0.00031886806161130225
+painful menstruation,0.000310062562841213
+cloudy eye,0.00030332675219122085
+blood clots during menstrual periods,0.00030240203830788286
+hand or finger cramps or spasms,0.000292808413843047
+bedwetting,0.00029203571155618594
+rib pain,0.000284164052252319
+muscle weakness,0.00028353329069848366
+kidney mass,0.0002824617821875896
+penile discharge,0.00027567391291666375
+bleeding from eye,0.00026923095852288836
+pain in gums,0.0002668138743124223
+infant spitting up,0.00026500030332397747
+sneezing,0.0002595446320444971
+neck cramps or spasms,0.0002555713640155039
+back mass or lump,0.00025377332523936755
+redness in or around nose,0.00024397066036655501
+diaper rash,0.00024347620234962763
+"muscle cramps, contractures, or spasms",0.0002420506761209888
+shoulder lump or mass,0.00023953453935455384
+low urine output,0.00023680211030606296
+painful sinuses,0.00023452844719645049
+foot or toe stiffness or tightness,0.0002315084540844886
+drainage in throat,0.00021808202764584284
+hand or finger weakness,0.00021646142626557572
+lip sore,0.0002022268300092802
+itching of the anus,0.0001994233303896963
+premature ejaculation,0.00019911093779546854
+arm lump or mass,0.00019721560559304618
+mass or swelling around the anus,0.0001955834999812228
+burning chest pain,0.00017543618338747055
+postpartum problems of the breast,0.00017376747497775775
+early or late onset of menopause,0.00014675836193600851
+flu-like syndrome,0.00014008477780612147
+abdominal distention,0.0001200709795966318
+unusual color or odor to urine,0.00011607665834450942
+sore in nose,0.00010446117151138768
+vulvar sore,7.851358966267712e-05
+wrinkles on skin,7.304280064879918e-05
+hip stiffness or tightness,7.069834321114874e-05
+frequent menstruation,6.882818515491999e-05
+scanty menstrual flow,4.1131083188253225e-05
+premenstrual tension or irritability,1.4664396737807355e-05
+back stiffness or tightness,1.4383287857545803e-05
+symptoms of infants,1.1131827298468023e-05
+dry or flaky scalp,1.496377311689112e-06
+infrequent menstruation,0.0
+skin pain,0.0
+ankle stiffness or tightness,0.0
+hip weakness,0.0
+mass on vulva,0.0
+jaw pain,0.0
+back swelling,0.0
+pus in sputum,0.0
+tongue pain,0.0
+lump over jaw,0.0
+elbow lump or mass,0.0
+low back stiffness or tightness,0.0
+nose deformity,0.0
+problems with orgasm,0.0
+stuttering or stammering,0.0
+skin on head or neck looks infected,0.0
+eyelid retracted,0.0
+underweight,0.0
+polyuria,0.0
+hip swelling,0.0
+feeling hot,0.0
+hip lump or mass,0.0
+low back swelling,0.0
+pallor,0.0
+foot or toe cramps or spasms,0.0
+shoulder cramps or spasms,0.0
+joint stiffness or tightness,0.0
+change in skin mole size or color,0.0
+eye strain,0.0
+nailbiting,0.0
+pus in urine,0.0
+abnormal size or shape of ear,0.0
+elbow cramps or spasms,0.0
+feeling hot and cold,0.0
+feet turned in,0.0
+elbow stiffness or tightness,0.0
+mass on ear,0.0
+abnormal appearing tongue,0.0
+arm cramps or spasms,0.0
+throat irritation,0.0
+swollen tongue,0.0
+disturbance of smell or taste,0.0
+discharge in stools,0.0
+pupils unequal,0.0
+thirst,0.0
+sleepwalking,0.0
+skin oiliness,0.0
+knee cramps or spasms,0.0
+posture problems,0.0
+bleeding in mouth,0.0
+tongue bleeding,0.0
+neck weakness,0.0
