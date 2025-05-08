@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        h2, h3 {
+            color: #2c3e50;
+        }
+        
+        /* Hero section styles */
+        .hero {
+            text-align: left;
+            padding: 3rem 0;
+            background-color: #f8f9fa;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .disclaimer {
+            font-size: 0.9rem;
+            color: #777;
+            font-style: italic;
+            margin-top: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Section headers */
+        .section-header {
+            text-align: center;
+            margin: 3rem 0 1.5rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #555;
+        }
+        
+        /* Box container styles */
+        .container-boxes {
+            display: flex;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .box {
+            flex: 1;
+            min-width: 280px;
+            margin: 15px;
+            padding: 30px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            border-top: 4px solid #3498db;
+        }
+        
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        
+        .box h3 {
+            margin-top: 0;
+            color: #3498db;
+            font-size: 1.3rem;
+        }
+        
+        .box p {
+            color: #555;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero-text {
+                margin-bottom: 2rem;
+            }
+            
+            .box {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Welcome to SymptoAI</h2>
+                    <p>Harness the power of artificial intelligence to identify symptoms and provide potential diagnoses in seconds. 
+                    This AI Diagnoser tool leverages advanced machine learning models trained on verified medical datasets to deliver fast, data-driven insights. Whether you're tracking symptoms or seeking preliminary guidance, this tool empowers users with accessible health information, right at your fingertips.
+                    </p>
+                    <p class="disclaimer">Disclaimer: This tool is not meant to replace healthcare providers. If you are experiencing a medical emergency, call 911 immediately or go to the nearest emergency room. Always consult a healthcare provider for medical concerns.</p>
+                    <div class="actions">
+                        <a href="{{ url_for('predict') }}" class="btn">Click Here for Diagnosis</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="{{ url_for('static', filename='homepage.jpg') }}" alt="AI Medical Diagnosis">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-header">
+        <h2>Who Can Use SymptoAI</h2>
+    </div>
+
+    <div class="container-boxes">
+        <div class="box">
+            <h3>Healthcare Professionals</h3>
+            <p>Doctors and clinicians can use this tool as a supplemental tool for preliminary symptom assessment.</p>
+        </div>
+        <div class="box">
+            <h3>Caregivers & Parents</h3>
+            <p>Those taking care of loved ones can get early guidance to better understand and manage health concerns.</p>
+        </div>
+        <div class="box">
+            <h3>Everyday Users</h3>
+            <p>Individuals seeking quick, reliable insights into common symptoms can use this tool without needing an immediate doctor's appointment.</p>
+        </div>
+    </div>
+
+    <div class="section-header">
+        <h2>How To Use SymptoAI</h2>
+        <p>Experience the ease and precision of SymptoAI in just a few simple steps.</p>
+    </div>
+
+    <div class="container-boxes">
+        <div class="box">
+            <h3>Input Your Symptoms</h3>
+            <p>Begin by putting one or more symptoms into the checker. SymptoAI is intended to understand a wide range of health indicators.</p>
+        </div>
+        <div class="box">
+            <h3>Answer Questions</h3>
+            <p>In order to better detect possible diseases, please enter the information to the general questions.</p>
+        </div>
+        <div class="box">
+            <h3>Recieve Your Diagnosis</h3>
+            <p>After analyzing your symptoms, SymptoAI instantly gives you a thorough list of possible medical diseases along with insightful information.</p>
+        </div>
+    </div>
+
+ 
+    
+</body>
+{% endblock %}

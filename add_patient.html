@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Add New Patient</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="name" required>
+        </div>
+        <div class="form-group">
+            <label>Age</label>
+            <input type="number" name="age" required>
+        </div>
+        <div class="form-group">
+            <label>Gender</label>
+            <select name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Blood Type</label>
+            <select name="blood_type" required>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="AB">AB</option>
+                <option value="O">O</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Medical Condition</label>
+            <input type="text" name="medical_condition" required>
+        </div>
+        <div class="form-group">
+            <label>Medication</label>
+            <input type="text" name="medication" required>
+        </div>
+        <button type="submit">Add Patient</button>
+    </form>
+</div>
+{% endblock %}

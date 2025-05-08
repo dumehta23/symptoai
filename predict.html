@@ -1,0 +1,316 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container diagnosis-container">
+    <h2>Please complete the form below for an accurate diagnosis.</h2>
+    <p>If you are experiencing a medical emergency, call 911 immediately or go to the nearest emergency room❗</p>
+
+    
+    <form method="POST" action="{{ url_for('predict') }}">
+        <!-- Personal Information Section -->
+        <div class="form-section">
+            <h3>Personal Information</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="number" name="age" min="1" max="120" required class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select name="gender" required class="form-control">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Symptoms Section -->
+        <div class="form-section">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 class="mb-0">Select Symptoms</h3>
+                <div>
+                    <button type="button" class="btn btn-sm btn-outline-secondary mr-2" id="expand-all">Expand All</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" id="collapse-all">Collapse All</button>
+                </div>
+            </div>
+            
+            <!-- Search Box -->
+            <div class="form-group mb-4">
+                <input type="text" class="form-control" id="symptom-search" placeholder="Search symptoms across all categories...">
+            </div>
+                  
+            <!-- Tab Content -->
+            <div class="tab-content" id="symptomTabsContent">
+                {% for category, symptom_groups in symptom_categories.items() %}
+                <div class="tab-pane fade {% if loop.first %}show active{% endif %}" id="{{category}}" role="tabpanel">
+                    <div class="d-flex justify-content-between mb-2">
+                        <small class="text-muted">
+                            {{category}}
+                        </small>
+                        <button type="button" class="btn btn-sm btn-outline-primary select-group" data-category="{{category}}">
+                            Select All Symptoms
+                        </button>
+                    </div>
+                    
+                    <div class="row symptom-columns">
+                        {% for symptom_group in symptom_groups %}
+                        <div class="col-md-4 symptom-column">
+                            <div class="symptom-group">
+                                {% for symptom in symptom_group %}
+                                <div class="form-check symptom-item">
+                                    <input class="form-check-input symptom-checkbox" type="checkbox" 
+                                           id="{{symptom}}" name="symptoms" value="{{symptom}}">
+                                    <label class="form-check-label" for="{{symptom}}">
+                                        {{symptom.replace('_', ' ').title()}}
+                                    </label>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Health Metrics Section -->
+        <div class="form-section">
+            <h3>Health Metrics</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Blood Pressure</label>
+                        <select name="bp" required class="form-control">
+                            <option value="Low">Low</option>
+                            <option value="Normal">Normal</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Cholesterol Level</label>
+                        <select name="chol" required class="form-control">
+                            <option value="Low">Low</option>
+                            <option value="Normal">Normal</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Blood Type</label>
+                        <select name="blood_type" required class="form-control">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="AB">AB</option>
+                            <option value="O">O</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Questions Section -->
+        <div class="form-section">
+            <h3>Additional Questions</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Do you have any allergies?</label>
+                        <input type="text" name="allergies" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Do you smoke?</label>
+                        <select name="smoke" required class="form-control">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Do you exercise regularly?</label>
+                        <select name="exercise" required class="form-control">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-diagnosis">Get Diagnosis</button>
+    </form>
+</div>
+
+<style>
+    .diagnosis-container {
+        max-width: 1200px;
+    }
+    
+    .instructions {
+        margin-bottom: 20px;
+        color: #666;
+    }
+    
+    .form-section {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .symptoms-row {
+        margin-top: 15px;
+    }
+    
+    .symptom-column {
+        padding: 0 15px;
+    }
+    
+    .symptom-group {
+        display: flex;
+        flex-direction: column;
+        max-height: 400px;
+        overflow-y: auto;
+        padding: 10px;
+        background: white;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+    
+    .symptom-item {
+        padding: 5px 10px;
+        margin: 2px 0;
+        background: #f9f9f9;
+        border-radius: 3px;
+    }
+    
+    .symptom-item:hover {
+        background: #e9f5ff;
+    }
+    
+    .form-check-label {
+        margin-left: 8px;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+    
+    .btn-diagnosis {
+        padding: 10px 30px;
+        font-size: 1.1rem;
+        margin-top: 20px;
+    }
+    
+    .symptom-group {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    
+    .symptom-item.highlight {
+        background-color: #fff3cd;
+    }
+    
+    .symptom-item.hidden {
+        display: none;
+    }
+    
+    .select-group {
+        font-size: 0.8rem;
+        padding: 0.15rem 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+        .symptom-group {
+            max-height: 200px;
+        }
+        
+        .symptom-column {
+            margin-bottom: 15px;
+        }
+    }
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Search functionality
+    const searchInput = document.getElementById('symptom-search');
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        
+        if (searchTerm === '') {
+            document.querySelectorAll('.symptom-item').forEach(item => {
+                item.classList.remove('hidden');
+                item.classList.remove('highlight');
+            });
+            return;
+        }
+        
+        document.querySelectorAll('.symptom-item').forEach(item => {
+            const label = item.querySelector('label').textContent.toLowerCase();
+            if (label.includes(searchTerm)) {
+                item.classList.remove('hidden');
+                item.classList.add('highlight');
+                
+                // Make the parent tab visible if it contains matches
+                const tabPane = item.closest('.tab-pane');
+                if (tabPane) {
+                    tabPane.classList.add('show', 'active');
+                }
+            } else {
+                item.classList.add('hidden');
+                item.classList.remove('highlight');
+            }
+        });
+        
+        setTimeout(() => {
+            document.querySelectorAll('.symptom-item.highlight').forEach(item => {
+                item.classList.remove('highlight');
+            });
+        }, 1500);
+    });
+    
+    document.getElementById('expand-all').addEventListener('click', function() {
+        document.querySelectorAll('.symptom-group').forEach(group => {
+            group.style.maxHeight = 'none';
+        });
+    });
+    
+    document.getElementById('collapse-all').addEventListener('click', function() {
+        document.querySelectorAll('.symptom-group').forEach(group => {
+            group.style.maxHeight = '300px';
+        });
+    });
+    
+    document.querySelectorAll('.select-group').forEach(button => {
+        button.addEventListener('click', function() {
+            const category = this.dataset.category;
+            const commonSymptoms = {
+                'Respiratory': ['cough', 'breathlessness', 'sneezing'],
+                'Digestive': ['stomach_pain', 'vomiting', 'nausea'],
+                'Neurological': ['headache', 'dizziness', 'fatigue'],
+                'Skin': ['itching', 'skin_rash'],
+                'Pain': ['joint_pain', 'back_pain'],
+                'General': ['fever', 'chills']
+            };
+            
+            commonSymptoms[category].forEach(symptom => {
+                const checkbox = document.getElementById(symptom);
+                if (checkbox) checkbox.checked = true;
+            });
+        });
+    });
+});         
+</script>
+{% endblock %}
