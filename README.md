@@ -1,8 +1,7 @@
 # AI Diagnostic System
 
 ## Project Overview
-This project is an AI-powered diagnostic system designed to assist healthcare professionals by providing real-time diagnostic recommendations based on patient input.  
-It features a user-friendly graphical interface built with Python, HTML, and CSS making it accessible even to non-technical users. The system utilizes machine learning models trained on simulated healthcare datasets to deliver accurate disease diagnosis and predictions.  
+This project is an AI-powered diagnostic system designed to assist healthcare professionals by providing real-time diagnostic recommendations based on patient input. It features a user-friendly graphical interface built with Python, HTML, and CSS making it accessible even to non-technical users. The system utilizes machine learning models trained on simulated healthcare datasets to deliver accurate disease diagnosis and predictions.  
 
 Designed for both personal use and healthcare professionals, it offers:    
     Patient diagnosis based on inputed symptoms
