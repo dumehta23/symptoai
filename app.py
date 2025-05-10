@@ -86,7 +86,7 @@ def load_symptoms():
             'throat_irritation', 'chest_pain', 'weakness_in_limbs', 'fast_heart_rate'
         ]
 
-# Routes
+
 @app.route('/')
 def home():
     return render_template('index.html')
