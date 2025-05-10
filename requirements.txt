@@ -1,32 +1,28 @@
 # Required python libraries
 
-# Core Flask
+ 
 Flask==2.3.2
 Flask-SQLAlchemy==3.0.3
 Flask-Login==0.6.2
 Werkzeug==2.3.6  # Pinned for security
 
-# Data Processing
+ 
 pandas==2.0.3
 numpy==1.24.3
 
-# Machine Learning
+ 
 scikit-learn==1.3.0
 tensorflow==2.12.0  # Or tensorflow-cpu for lighter install
 
-pickle-mixin==1.0.0  # For model serialization
-python-dotenv==1.0.0  # For .env support
-faker==18.11.2  # Only needed for test data generation
+pickle-mixin==1.0.0   
+python-dotenv==1.0.0   
+faker==18.11.2   
 
-# Testing
+ 
 pytest==7.4.0
 requests==2.31.0  # For test_api.py
+ 
 
-# Data Generation
-faker==18.11.2
-```
-
-### Installation Command:
 ```bash
 pip install -r requirements.txt
 ```
