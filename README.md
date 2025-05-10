@@ -42,11 +42,13 @@ pip install -r requirements.txt
 - Flask-Login
 
 ### 3. Database Configuration 
-1. Azure SQL Setup:
+1. Automatic setup: Database will be created automatically at instance/patient_feedback.db on first run.
+Backups are stored in the same folder with timestamped filenames
+2. Azure SQL Setup:
     Create a server (addpatientserver.database.windows.net)
     Set firewall rules to allow your IP
     Create database patientDatabase
-2. Configure connection in app.py:
+3. Configure connection in app.py:
     app.config['SQLALCHEMY_DATABASE_URI'] = (
         'mssql+pyodbc://{username}:{password}@{server}/{database}?'
         'driver=ODBC+Driver+18+for+SQL+Server'
@@ -122,11 +124,16 @@ A GUI window of a web application will open where you can navigate SymptoAI.
     1,John Smith,45,Male,"Diabetes, Hypertension","fever, cough","Patient reports 3-day fever"
     2,Maria Garcia,32,Female,None,"headache","Morning headaches for 1 week"
 
+ ## Database Management
+Access Data: Use SQLite browsers or sqlite3 instance/patient_feedback.db
+Backups: Automatic daily backups in the instance folder
+Migration: To switch to Azure SQL, uncomment the configuration in app.py
+
 ## Future Work
 - Multilingual support.
 - Broader EHR system compatibility.
 - Descriptions of diagnosis. 
-- Continous model training.
+- Continuous model training.
 - Mobile application development.
 
 ## License
