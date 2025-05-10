@@ -107,7 +107,7 @@ Run the main Python script to start the application:
 ```bash
 # Terminal 1: Start Flask
 python app.py
-* Running on http://127.0.0.1:5000 *
+
 # Terminal 2: Test API (EHR data)
 python test_api.py 
 * This is running with simulated ehr_data.csv*
