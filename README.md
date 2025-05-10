@@ -25,7 +25,7 @@ Azure account (for SQL Database)
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-repo/symptoai.git
+git clone https://github.com/dumehta23/symptoai
 cd ai-diagnostic-system
 pip install -r requirements.txt
 ```
