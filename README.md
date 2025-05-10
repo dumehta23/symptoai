@@ -132,6 +132,4 @@ A GUI window of a web application will open where you can navigate SymptoAI.
 ## License
 This project uses open-source libraries and public datasets. 
 
-## Need Help?
-- Contact : dumehta@csu.fullerton.edu
 ---
