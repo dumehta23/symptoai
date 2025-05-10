@@ -1,26 +1,17 @@
 # Required python libraries
 
- 
 Flask==2.3.2
 Flask-SQLAlchemy==3.0.3
 Flask-Login==0.6.2
-Werkzeug==2.3.6  # Pinned for security
-
- 
+Werkzeug==2.3.6  
 pandas==2.0.3
 numpy==1.24.3
-
- 
 scikit-learn==1.3.0
 tensorflow==2.12.0  # Or tensorflow-cpu for lighter install
-
 pickle-mixin==1.0.0   
-python-dotenv==1.0.0   
-faker==18.11.2   
-
- 
+python-dotenv==1.0.0    
 pytest==7.4.0
-requests==2.31.0  # For test_api.py
+requests==2.31.0 
  
 
 ```bash
