@@ -9,12 +9,25 @@ import pandas as pd
 import os
 import numpy as np
 import traceback
+import sqlite3
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(24)
+
+# SQLite configuration (primary database)
+instance_path = os.path.join(app.root_path, 'instance')
+os.makedirs(instance_path, exist_ok=True)
+sqlite_path = os.path.join(instance_path, 'patient_feedback.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{sqlite_path}'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {'connect_args': {'check_same_thread': False}}
+
+# Commented out Azure SQL Database configuration
+"""
+# Azure SQL Database configuration (commented out)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mssql+pyodbc://{username}:{password}@{server}/{database}?driver=ODBC+Driver+18+for+SQL+Server'.format(
-    username='drashtimehta',   
-    password='Drashti23',   
+    username='drashtimehta',
+    password='Drashti23',
     server='addpatientserver.database.windows.net',
     database='patientDatabase'
 )
@@ -25,12 +38,12 @@ app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
     'pool_size': 10,
     'max_overflow': 20,
 }
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+"""
+
+db = SQLAlchemy(app)
 
 API_SECRET_KEY = "CPSC597"
 
-db = SQLAlchemy(app)
- 
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 
@@ -47,6 +60,7 @@ class Patient(db.Model):
     blood_type = db.Column(db.String(3), nullable=False)  
     medical_condition = db.Column(db.String(200), nullable=False)
     medication = db.Column(db.String(200), nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
 class Feedback(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -258,8 +272,8 @@ def view_patients():
 def create_admin():
     users = User.query.all()
     found = False
-    for u in users:
-        if u.username == 'admin':
+    for n in users:
+        if n.username == 'admin':
             found = True
             break
     if not found:
@@ -289,6 +303,22 @@ def feedback():
 
 if __name__ == '__main__':
     with app.app_context():
-        db.create_all()
-        create_admin()
+        try:
+            db.create_all()
+            create_admin()
+            print(f"SQLite database created at: {sqlite_path}")
+        except Exception as e:
+            print(f"Error creating database tables: {str(e)}")
+    
+    def backup_database():
+        try:
+            backup_db = os.path.join(instance_path, f'patient_feedback_backup_{datetime.now().strftime("%Y%m%d")}.db')
+            import shutil
+            shutil.copy2(sqlite_path, backup_db)
+            print(f"Database backed up to: {backup_db}")
+        except Exception as e:
+            print(f"Backup failed: {str(e)}")
+    
+    backup_database()
+    
     app.run(debug=True)
