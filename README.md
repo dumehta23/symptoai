@@ -19,8 +19,8 @@ Built with Python (Flask), HTML/CSS, and database on Azure.
 ## Setup Instructions
 
 ### Prerequisites
-Python 3.8+
-Azure account (for SQL Database)
+- Python 3.8+
+- Azure account (for SQL Database)
 
 ### 1. Clone the Repository
 ```bash
@@ -41,8 +41,7 @@ pip install -r requirements.txt
 - Flask-Login
 
 ### 3. Database Configuration 
-1. Automatic setup: Database will be created automatically at instance/patient_feedback.db on first run.
-Backups are stored in the same folder with timestamped filenames
+1. Automatic setup: Database will be created automatically at instance/patient_feedback.db on first run. Backups are stored in the same folder with timestamped filenames
 2. Azure SQL Setup:
     Create a server (addpatientserver.database.windows.net)
     Set firewall rules to allow your IP
