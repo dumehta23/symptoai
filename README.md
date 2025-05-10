@@ -125,9 +125,9 @@ A GUI window of a web application will open where you can navigate SymptoAI.
     2,Maria Garcia,32,Female,None,"headache","Morning headaches for 1 week"
 
  ## Database Management
-Access Data: Use SQLite browsers or sqlite3 instance/patient_feedback.db
-Backups: Automatic daily backups in the instance folder
-Migration: To switch to Azure SQL, uncomment the configuration in app.py
+1. Access Data: Use SQLite browsers or sqlite3 instance/patient_feedback.db
+2. Backups: Automatic daily backups in the instance folder
+3. Azure: To switch to Azure SQL, uncomment the configuration in app.py
 
 ## Future Work
 - Multilingual support.
