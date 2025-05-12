@@ -67,41 +67,6 @@ Once downloaded:
 
 > **Note:** Create the `data/` folder if it does not exist.
 
-## Project Structure
-```
-/data                         # Dataset files
-    /dataset from Kaggle
-/models                       # Trained model files
-    /disease_model.pkl
-    /symptom_features.pkl
-    /disease_model.csv
-    /symptom_features.csv
-    /symptom_importance.csv
-    /cnn_disease_model.h5
-    /cnn_label_encoder.pkl
-/static
-    /css
-        /style.css
-    /homepage.jpg
-/templates
-    /add_patient.html
-    /base.html
-    /index.html
-    /login.html
-    /patients.html
-    /predict.html
-    /results.html
-README.md
-app.py 
-CNN_Testing.ipynb
-RNN_Testing.ipynb
-RandomForest_Testing.ipynb
-train_model.py
-requirements.txt
-api-docs.md
-test_api.py          
-```
-
 ## How to Run
 Run the main Python script to start the application:
 ```bash
